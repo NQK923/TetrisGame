@@ -13,6 +13,7 @@ class HandControl:
         self.mp_hand = mp.solutions.hands  # Khởi tạo hand solution từ mediapipe
         # Khởi tạo model nhận diện bàn tay
         self.hands = self.mp_hand.Hands(model_complexity=0, min_detection_confidence=0.5, min_tracking_confidence=0.5)
+        self.cap = cv2.VideoCapture(0)
         self.count = 0  # Khởi tạo biến đếm
 
     def handcontrol(self):
